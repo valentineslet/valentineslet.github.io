@@ -1,0 +1,31 @@
+.accordion {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Styl dla nagłówka elementu listy */
+  .accordion-header {
+    background-color: #f4f4f4;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .accordion-content {
+    padding: 10px;
+    display: none;
+  }
+
+  /* Styl dla zdjęcia */
+  .accordion-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Dodanie efektu animacji */
+  .accordion-content.active {
+    display: block;

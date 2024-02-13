@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koperta z listem</title>
+<style>
+  /* Styl dla całej strony */
+  body {
+    background-color: #fdd7e4; /* Różowy kolor tła */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative; /* Dodajemy pozycję względną, aby czerwone serduszka mogły być pozycjonowane */
+  }
+
+  /* Styl dla koperty */
+  .envelope {
+    width: 55%; /* Zwiększenie szerokości */
+    height: 500px; /* Zwiększenie wysokości */
+    background-color: #f9f9f9;
+    border: 6px solid #7a7a7a;
+    border-radius: 30px; /* Zwiększenie promienia zaokrąglenia */
+    position: relative;
+    margin: 0 auto; /* Wyśrodkowanie na stronie */
+    margin-top: 50px; /* Dodatkowy odstęp od góry */
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  /* Styl dla zagięcia koperty */
+  .envelope:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 0 40px 40px; /* Zwiększenie rozmiarów zagięcia */
+    border-color: transparent transparent transparent #7a7a7a;
+  }
+
+  /* Styl dla napisu "Open here" */
+  .open-here {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #7a7a7a;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* Styl dla listu */
+  .letter {
+    background-color: #f8f8f0; /* Lekko beżowy kolor tła */
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Początkowo ukryj list */
+    position: relative;
+    z-index: 2;
+    overflow: auto; /* Dodatkowy overflow dla większego listu */
+  }
+
+  /* Styl dla treści listu */
+  .letter-content {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+
+  /* Styl dla pola wprowadzania kodu */
+  .code-input {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="envelope" onclick="openEnvelope()">
+  <div class="open-here">Click to open, kurczaczku</div>
+  <div class="letter" id="letter">
+    <div class="letter-content">
+      <h2>Hi, Lakshan</h2>
+      <p>Okay look I do not have a lot of experience in this type of things and I was thinking how to make this Valentine’s Day at least a bit more special. Knowing all, uk the distance, the fact that this day will probably be quite hard for you as well…Good luck with your exam bro!</p>
+
+      <p> And you know we are gonna meet soon so for me there is nothing better for valentines than this. But still I think this day is quite special as it’s the first 14th February when I know you. </p>
+      <p>Honestly, this letter is just full of random thoughts I’ve been collecting for the past few days. So it might be messy, but you need to forgive me… I always write a lot of words in essays so if it’s too much, ask me for the shorter version, I might do something about it 😊</p>
+      <p>All of this is what I’ve been thinking about for some time already. Some of my thoughts together in one letter. I know it’s hard for me to express my feelings and I still need to learn how to do this, but until I do I will keep finding ways to let you know how much you mean to me. I know this letter might not be enough, but I hope you will see this in my eyes when we meet. </p>
+      
+      <p>SO I just wanted to say that there is no other person I will be thinking about today even if I can’t see you. We know each other for almost 4 months and I must say time flies really fast. Even tho I have the sensation I know you for much longer. These 4 months were crazy uk but you made it be peaceful on its own way. Every single day we talked I was going to sleep happy. After a lot of time I could enjoy evenings just because I could listen about your days (even if sometimes you don’t want to say more than “I’m good”) It is already enough for me to be in a great mood. I never thought I would meet someone who will make me smile that much EVERY SINGLE DAY. Uk smiling until my face hurts… Someone who would listen to me and actually make me feel listened. What is more, I fell in love with you because of the way you are, the way you talk about life, people, plans, your desires. I love that you are determined to achieve your goals, you want to develop yourself and how much you care about people around you. I told you things I’ve never said to anyone and I never felt judged. You make everything so easy uk… Even going randomly to London alone. What’s more, you make such plan so worth it. Going there just for 2 days but at least being able to see you for a bit. Who would have thought I will end up doing something like that. But here I am counting days just to finally meet you, Lakshan (I know I never say your name, Im so scared to mess it up, but I promise you I hear it in my head all the time). </p>
+       
+       <p> I remember the actual moment when I had this feeling of just being happy to be able to listen to you. Uk when it hit me. And it was just before my oral exam. You were just talking about these jobs possibilities or whatever I had the exam about. And I remember not being able to focus because I was just genuinely happy seeing you talk. Just this and it was that special moment for me. Idk how to explain it, don’t judge me. Actually every time you talk about something, especially about your interests, everything is so special. I think Im fucked…. But well, in a good way, no? </p>
+        
+       <p>Every notification from you makes me smile, your willing to call me makes me smile, every time you ask me how I feel or talk about your feelings, that all makes me smile. Even if some conversations are difficult. JESUS CHRIST IM JUST IN LOVE OKAY. And if it scares you please tell me now. Also, you know, I feel like this, but somehow not in a crazy way, but in the most peaceful way possible. </p>
+       
+       <p> So I need to say thank you for everything you did for me. And now you will probably think you didn’t do anything. And I think that is one of the best things about you. You do these things naturally. You make me feel special, loved and appreciated. I don’t know how you do it but every time we talk I forget about all of the bad things happening around me. Even when I’m extremely mad or anxious (or I want to kill Max, not your friend tho) 5 minutes just talking to you and I become happy and I feel the type of peace I’ve never experienced. And I know I am not extremely talkative but just looking at you and your smile makes me feel so calm. I remember you said once about healing together. And uk I didn’t even think about it much before but you helped me a lot and I will be forever grateful for this. </p>
+       <p>Thanks to you I don’t want to stick to the past and I want to develop myself every day. You motivate me to keep doing my own things and trying to be how I really want to be. I can’t thank you enough for this, really. Whenever one of my friends asks me about you I immediately “smile like an idiot” as you like to say. Everything around reminds me of you. Lollipops, yellow lights next to my house or every plane in the sky that could take me to London. My life became so beautiful lately and you are responsible for that…by just being here. All of this is not easy but I believe it’s worth it.</p>
+       <p>You know I love this little smile on your face when I say something dumb, I don’t understand you or whenever you make fun of me because I’m shy. It’s like, everything I should feel insecure about change into some cute, little moments between us. I don’t know how it’s even possible to enjoy something that usually makes me feel bad. How did you do this, I have no idea. It’s funny how a few months ago I didn’t know you existed but now I can’t stop thinking about you and you have such a positive impact on my life. As I said on tandem, I adore you and your British personality and I’m sure it’s not gonna change.</p>
+       <p> I know our situation is not easy but I can promise you, you can always count on me, I will always care about you and love you because you deserve to be loved. Doesn’t matter what our “status” will be. You are such a beautiful person and I hope you know this. I will remind you if you forget one day or every time you have doubts. I must also say I’m so scared about our first meeting, that it will not go as you expect this to go. But maybe being nervous in this situation is normal, right. Being far away from each other is hard, but please, if you have any doubts, problems or actually anything, always talk to me. And if you’re scared to talk about it, let me know there is something I need to focus on. It’s really important and I never find it annoying. </p>
+        
+       <P>All of this might sound so fake and forced, a few months ago I wouldn’t believe it either, but I promise you I am just here in front of my laptop writing what I feel at the moment. The worst part is that I can’t even express well what I feel but this feeling inside of me is really nice. What’s more, I used to consider talking about these things in such way as cringe or unnatural. But well, I guess not anymore. Maybe I will now call you BRO again just in case you’re overwhelmed or feel WEIRD. I know this all might actually overwhelm you, but if I don’t say this, I’ll explode…</P>
+        <P>I am so sorry if my English wasn’t so perfect but I hope at least you got what I wanted to share with you. AND HAPPY VALENTINE’S DAY kurczaczku! I hope this day is beautiful, you’re doing well in uni and you have a lot of fun with your friends after the exam. Kisses, hugs and much love. </P>
+        <P>I know guys rarely get flowers and I can’t really get you some, but here I send you some virtual Valentine’s Day dark red roses, so you can feel like a princess… </P>
+        </p>
+      <p>Kocham Cię<br>Julka not XD (your polish bestie)</p>
+      <img src="img/red roses.jpg" alt="redroses" style="max-width: 100%; height: auto;"> 
+    </div>
+  </div>
+</div>
+
+
+<script>
+  var codeInput = document.getElementById('code');
+  var letter = document.getElementById('letter');
+
+  function openEnvelope() {
+    var code = prompt("Enter the code to open the letter");
+    if (code === "Bambo") { // Zmienić "tajnykod" na właściwy kod
+      letter.style.display = 'block';
+    } else {
+      alert("Nieprawidłowy kod. Proszę spróbować ponownie.");
+    }
+  }
+
+  function checkCode() {
+    var code = codeInput.value;
+    if (code === "Bambo") { // Zmienić "tajnykod" na właściwy kod
+      letter.style.display = 'block';
+    } else {
+      alert("Wrong code, go away...");
+    }
+  }
+
+
+</script>
+
+</body>
+</html>
